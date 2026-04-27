@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import SparkleBackground from '@/components/SparkleBackground';
 import { GlassButton } from '@/components/GlassButton';
+import { Logo } from '@/components/Logo';
 
 export default function ContactPage() {
   return (
@@ -8,14 +9,19 @@ export default function ContactPage() {
       <SparkleBackground />
       <Navbar />
 
-      <div className="pt-40 pb-20 min-h-screen">
+      <div className="pt-36 pb-20 min-h-screen">
         <div className="max-w-2xl mx-auto px-6 text-center">
-          <h1 className="font-fredoka text-6xl mb-8 text-[#FFCC00]">
+
+          <div className="flex justify-center mb-8">
+            <Logo size="large" />
+          </div>
+
+          <h1 className="font-fredoka text-2xl md:text-3xl mb-6 text-[#FFCC00]">
             Let's Talk Magic
           </h1>
 
-          <div className="glass rounded-3xl p-12">
-            <p className="text-xl mb-10 text-white/90">
+          <div className="glass rounded-3xl p-6 md:p-10">
+            <p className="text-sm mb-8 text-white/90">
               Have a question about a collectible, shipping, or just want to say hello?
             </p>
 
@@ -42,7 +48,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <GlassButton primary href="mailto:collectorfan.canada@gmail.com" className="mt-12 w-full">
+            <GlassButton primary href="mailto:collectorfan.canada@gmail.com" className="mt-8 w-full text-sm py-3">
               Send us a Message
             </GlassButton>
           </div>

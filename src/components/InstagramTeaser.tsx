@@ -40,10 +40,10 @@ export default function InstagramTeaser() {
     <section className="py-20 relative bg-black/20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="font-fredoka text-4xl md:text-5xl text-[#FFCC00] mb-3 tracking-tight">
+          <h2 className="font-fredoka text-2xl md:text-3xl text-[#FFCC00] mb-3 tracking-tight">
             Latest from the Wizard's Workshop
           </h2>
-          <p className="text-[#E0F0FF] text-lg">
+          <p className="text-[#E0F0FF] text-sm">
             Fresh collectibles, unboxings & daily magic from Instagram
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function InstagramTeaser() {
             href="https://www.instagram.com/collectorfancanada/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 glass px-10 py-4 rounded-2xl hover:bg-white/20 text-lg transition-all"
+            className="inline-flex items-center gap-3 glass px-6 py-3 rounded-2xl hover:bg-white/20 text-sm transition-all"
           >
             Follow @CollectorFanCanada on Instagram ✨
           </a>
