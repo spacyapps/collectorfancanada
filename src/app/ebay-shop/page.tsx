@@ -1,25 +1,9 @@
 import Navbar from '@/components/Navbar';
 import SparkleBackground from '@/components/SparkleBackground';
-
-interface Listing {
-  id: string;
-  title: string;
-  price?: { value: string; currency: string };
-  image?: string;
-  condition?: string;
-  url: string;
-}
-
-async function fetchListings(): Promise<{ listings: Listing[]; total: number; error?: string }> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
-  const res = await fetch(`${baseUrl}/api/ebay/listings`, {
-    next: { revalidate: 300 },
-  });
-  return res.json();
-}
+import { fetchEbayListings, type Listing } from '@/lib/ebay';
 
 export default async function EbayShopPage() {
-  const { listings, total, error } = await fetchListings();
+  const { listings, total, error } = await fetchEbayListings();
 
   return (
     <>
