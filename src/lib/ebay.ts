@@ -54,7 +54,7 @@ async function searchEbay(token: string, q: string): Promise<Record<string, unkn
   const res = await fetch(url.toString(), {
     headers: {
       Authorization: `Bearer ${token}`,
-      'X-EBAY-C-MARKETPLACE-ID': 'EBAY_US',
+      'X-EBAY-C-MARKETPLACE-ID': 'EBAY_CA',
     },
     next: { revalidate: 300 },
   });
