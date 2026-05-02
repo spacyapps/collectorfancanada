@@ -10,7 +10,7 @@ export default async function EbayShopPage() {
       <SparkleBackground />
       <Navbar />
 
-      <main className="min-h-screen pt-28 pb-20">
+      <main className="min-h-screen pt-36 pb-20">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Header */}
