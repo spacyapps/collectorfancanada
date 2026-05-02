@@ -1,4 +1,4 @@
-const EBAY_SELLER_ID = 'CollectorFanCanada';
+const EBAY_SELLER_ID = 'collectorfancanada';
 const EBAY_TOKEN_URL = 'https://api.ebay.com/identity/v1/oauth2/token';
 const EBAY_SEARCH_URL = 'https://api.ebay.com/buy/browse/v1/item_summary/search';
 const EBAY_SCOPE = 'https://api.ebay.com/oauth/api_scope';
@@ -46,7 +46,7 @@ export async function fetchEbayListings(): Promise<{ listings: Listing[]; total:
     const token = await getEbayToken();
 
     const url = new URL(EBAY_SEARCH_URL);
-    url.searchParams.set('q', EBAY_SELLER_ID);
+    url.searchParams.set('q', 'a');
     url.searchParams.set('filter', `sellers:{${EBAY_SELLER_ID}}`);
     url.searchParams.set('limit', '50');
     url.searchParams.set('sort', '-date');
@@ -54,7 +54,7 @@ export async function fetchEbayListings(): Promise<{ listings: Listing[]; total:
     const res = await fetch(url.toString(), {
       headers: {
         Authorization: `Bearer ${token}`,
-        'X-EBAY-C-MARKETPLACE-ID': 'EBAY_CA',
+        'X-EBAY-C-MARKETPLACE-ID': 'EBAY_US',
       },
       next: { revalidate: 300 },
     });
