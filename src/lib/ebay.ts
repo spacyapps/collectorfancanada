@@ -46,7 +46,7 @@ export async function fetchEbayListings(): Promise<{ listings: Listing[]; total:
     const token = await getEbayToken();
 
     const url = new URL(EBAY_SEARCH_URL);
-    url.searchParams.set('q', '*');
+    url.searchParams.set('q', EBAY_SELLER_ID);
     url.searchParams.set('filter', `sellers:{${EBAY_SELLER_ID}}`);
     url.searchParams.set('limit', '50');
     url.searchParams.set('sort', '-date');
