@@ -21,6 +21,8 @@ export default async function EbayShopPage() {
             <p className="text-[#E0F0FF] text-sm opacity-70">
               {error ? 'Could not load listings' : `${total} item${total !== 1 ? 's' : ''} available`}
             </p>
+            <p className="text-white/40 text-xs mt-1">All prices in Canadian dollars (CAD)</p>
+
             <a
               href="https://ebay.ca/usr/CollectorFanCanada"
               target="_blank"
